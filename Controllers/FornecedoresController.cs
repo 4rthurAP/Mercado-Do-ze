@@ -33,6 +33,8 @@ namespace Mercado_Do_zé.Controllers
         {
             var fornecedor = await _context.Fornecedores.FindAsync(id);
 
+            var listarProdutos = await _context.Fornecedores.Include("Produtos").FirstOrDefaultAsync(predicate: x => x.Id == id);
+
             if (fornecedor == null)
             {
                 return NotFound();
@@ -98,7 +100,6 @@ namespace Mercado_Do_zé.Controllers
                 return NotFound();
             }
 
- 
             var listarProdutos = await _context.Fornecedores.Include("Produtos").FirstOrDefaultAsync(predicate: x => x.Id == id);
 
 
@@ -107,7 +108,19 @@ namespace Mercado_Do_zé.Controllers
 
             return NoContent();
         }
+        // GET: api/authors/search?namelike=th
+        [HttpGet("Search")]
+        public async Task<IActionResult> SearchAsync(int id)
+        {
+            var fornecedor = await _context.Fornecedores.FindAsync(id);
+                
+            if (fornecedor == null)
+            {
+                return  BadRequest("não há fornecedores");
+            }
 
+            return Ok();
+        }
         private bool FornecedorExists(int id)
         {
             return _context.Fornecedores.Any(e => e.Id == id);

@@ -13,5 +13,6 @@ namespace Mercado_Do_zé.Models
 
         public string NomeFornecedor { get; set; }
 
+        public virtual Produto Produtos {get; set;}
     }
 }
