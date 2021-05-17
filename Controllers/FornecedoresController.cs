@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Mercado_Do_zé.Data;
 using Mercado_Do_zé.Models;
+
 namespace Mercado_Do_zé.Controllers
 {
     [Route("api/[controller]")]
@@ -24,16 +25,14 @@ namespace Mercado_Do_zé.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Fornecedor>>> GetFornecedores()
         {
-            return await _context.Fornecedores.ToListAsync();
+            return await _context.Fornecedores.Include("Produtos").ToListAsync();
         }
 
         // GET: api/Fornecedores/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Fornecedor>> GetFornecedor(int id)
         {
-            var fornecedor = await _context.Fornecedores.FindAsync(id);
-
-            var listarProdutos = await _context.Fornecedores.Include("Produtos").FirstOrDefaultAsync(predicate: x => x.Id == id);
+            var fornecedor = await _context.Fornecedores.Include("Produtos").FirstOrDefaultAsync(predicate: x => x.Id == id);
 
             if (fornecedor == null)
             {
@@ -79,7 +78,7 @@ namespace Mercado_Do_zé.Controllers
         [HttpPost]
         public async Task<ActionResult<Fornecedor>> PostFornecedor(Fornecedor fornecedor)
         {
-            if(fornecedor.NomeFornecedor.Length < 10 && fornecedor.NomeFornecedor.Length > 50)
+            if (fornecedor.NomeFornecedor.Length < 10 || fornecedor.NomeFornecedor.Length > 50)
             {
                 return BadRequest("O campo NomeFornecedor deve ter entre 10 à 50 caracteres.");
             }
@@ -90,10 +89,22 @@ namespace Mercado_Do_zé.Controllers
             return CreatedAtAction("GetFornecedor", new { id = fornecedor.Id }, fornecedor);
         }
 
+        // GET: api/Fornecedores/search
+      //  [HttpGet("Search")]
+      //  public async Task<IActionResult> SearchAsync(Fornecedor fornecedor)
+      //  {
+      //      if (fornecedor == null)
+      //     {
+      //          return BadRequest("não há fornecedores");
+      //      }
+      //       return Ok();
+      //   }
+
         // DELETE: api/Fornecedores/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFornecedor(int id)
         {
+
             var fornecedor = await _context.Fornecedores.FindAsync(id);
             if (fornecedor == null)
             {
@@ -101,26 +112,13 @@ namespace Mercado_Do_zé.Controllers
             }
 
             var listarProdutos = await _context.Fornecedores.Include("Produtos").FirstOrDefaultAsync(predicate: x => x.Id == id);
-
-
+            
             _context.Fornecedores.Remove(fornecedor);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
-        // GET: api/authors/search?namelike=th
-        [HttpGet("Search")]
-        public async Task<IActionResult> SearchAsync(int id)
-        {
-            var fornecedor = await _context.Fornecedores.FindAsync(id);
-                
-            if (fornecedor == null)
-            {
-                return  BadRequest("não há fornecedores");
-            }
 
-            return Ok();
-        }
         private bool FornecedorExists(int id)
         {
             return _context.Fornecedores.Any(e => e.Id == id);

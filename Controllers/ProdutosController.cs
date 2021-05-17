@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Mercado_Do_zé.Data;
 using Mercado_Do_zé.Models;
+using Mercado_Do_zé.DTO;
 
 namespace Mercado_Do_zé.Controllers
 {
@@ -24,9 +25,18 @@ namespace Mercado_Do_zé.Controllers
 
         // GET: api/Produtos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
+        public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetProdutos()
         {
-            return await _context.Produtos.Include("Fornecedor").ToListAsync();
+
+            return await _context.Produtos.Include("Fornecedor")
+                .Select(x => new ProdutoDTO {
+                    FornecedorID = x.FornecedorID,
+                    Descricao = x.Descricao,
+                    Quantidade = x.Quantidade,
+                    Preco = x.Preco,
+                    Id = x.Id
+                })
+                .ToListAsync();
         }
 
         // GET: api/Produtos/5
@@ -79,7 +89,7 @@ namespace Mercado_Do_zé.Controllers
         [HttpPost]
         public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
-            if (produto.Descricao.Length < 10 && produto.Descricao.Length < 300)
+            if (produto.Descricao.Length < 10 || produto.Descricao.Length < 300)
             {
                 return BadRequest("O campo descrição deve ter entre 10 à 300 caractéres.");
             }

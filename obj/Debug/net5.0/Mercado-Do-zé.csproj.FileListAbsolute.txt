@@ -133,3 +133,6 @@ D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\ref\Mercado-Do-zé.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.pdb
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.genruntimeconfig.cache
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.csprojAssemblyReference.cache
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
