@@ -13,11 +13,11 @@ namespace Mercado_Do_zé.DTO
         public string Descricao { get; set; }
 
         public float Preco { get; set; }
-        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
+
         public int Quantidade { get; set; }
 
         public int FornecedorID { get; set; }
-
+        [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public string Fornecedor { get; set; }
 
     }

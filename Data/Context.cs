@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Mercado_Do_zé.Models;
 using System.Data;
-using Mercado_Do_zé.DTO;
 
 namespace Mercado_Do_zé.Data
 {
@@ -20,7 +19,5 @@ namespace Mercado_Do_zé.Data
         {
             optionsBuilder.UseSqlServer(connectionString: ConnectionString);
         }
-        public DbSet<Mercado_Do_zé.DTO.FornecedorDTO> FornecedorDTO { get; set; }
-        public DbSet<Mercado_Do_zé.DTO.ProdutoDTO> ProdutoDTO { get; set; }
     }
 }

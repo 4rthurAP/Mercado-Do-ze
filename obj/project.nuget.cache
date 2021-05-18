@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r0kX+DjTadw3FJrKBvMntQ9oKp72zLIHyslWLiQRjBFxo4si1r6pJ+ltbD+kcx/SVxnHlFfWB7E9o5pi2jCzmA==",
+  "dgSpecHash": "Jh6Xcoy2vfMCWFrAIAgmZjE4b0pvG1+XbccX3EZWDinzlayG+47Mm6g2ZQGDiFKcIJP+y+7Try0KKIh0Pq4Yhw==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\Projeto_C#\\Mercado-Do-zé\\Mercado-Do-zé.csproj",
   "expectedPackageFiles": [
@@ -108,7 +108,7 @@
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
-    "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",

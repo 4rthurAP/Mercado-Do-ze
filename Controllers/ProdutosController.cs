@@ -41,9 +41,17 @@ namespace Mercado_Do_zé.Controllers
 
         // GET: api/Produtos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Produto>> GetProduto(int id)
+        public async Task<ActionResult<ProdutoDTO>> GetProduto(int id)
         {
-            var produto = await _context.Produtos.Include("Fornecedor").FirstOrDefaultAsync(predicate: x => x.Id == id);
+            var produto = await _context.Produtos.Include("Fornecedor")
+                .Select(x => new ProdutoDTO
+            {
+                FornecedorID = x.FornecedorID,
+                Descricao = x.Descricao,
+                Quantidade = x.Quantidade,
+                Preco = x.Preco,
+                Id = x.Id
+            }).FirstOrDefaultAsync(predicate: x => x.Id == id);
             if (produto == null)
             {
                 return NotFound();
@@ -51,7 +59,6 @@ namespace Mercado_Do_zé.Controllers
  
             return produto;
         }
-
         // PUT: api/Produtos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -89,7 +96,7 @@ namespace Mercado_Do_zé.Controllers
         [HttpPost]
         public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
-            if (produto.Descricao.Length < 10 || produto.Descricao.Length < 300)
+            if (produto.Descricao.Length < 10 || produto.Descricao.Length > 300)
             {
                 return BadRequest("O campo descrição deve ter entre 10 à 300 caractéres.");
             }
@@ -101,7 +108,7 @@ namespace Mercado_Do_zé.Controllers
             if (produto.Preco <= 0)
             {
                 return BadRequest("O campo preco deve ter valor.");
-            }
+             }
 
             _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();

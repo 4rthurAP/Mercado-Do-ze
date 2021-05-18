@@ -1,3 +1,9 @@
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.AssemblyInfoInputs.cache
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.AssemblyInfo.cs
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.csproj.CoreCompileInputs.cache
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.MvcApplicationPartsAssemblyInfo.cs
+D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.MvcApplicationPartsAssemblyInfo.cache
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\appsettings.Development.json
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\appsettings.json
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Mercado-Do-zé.exe
@@ -8,6 +14,8 @@ D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Mercado-Do-zé.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\ref\Mercado-Do-zé.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Mercado-Do-zé.pdb
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Humanizer.dll
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
@@ -38,6 +46,7 @@ D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.VisualStudio.Web.
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -117,12 +126,6 @@ D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.AssemblyInfoInputs.cache
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.AssemblyInfo.cs
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.csproj.CoreCompileInputs.cache
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.MvcApplicationPartsAssemblyInfo.cs
-D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.MvcApplicationPartsAssemblyInfo.cache
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\staticwebassets\Mercado-Do-zé.StaticWebAssets.Manifest.cache
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\staticwebassets\Mercado-Do-zé.StaticWebAssets.xml
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\scopedcss\bundle\Mercado-Do-zé.styles.css
@@ -133,6 +136,3 @@ D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\ref\Mercado-Do-zé.dll
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.pdb
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.genruntimeconfig.cache
 D:\GitHub\Projeto_C#\Mercado-Do-zé\obj\Debug\net5.0\Mercado-Do-zé.csprojAssemblyReference.cache
-D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-D:\GitHub\Projeto_C#\Mercado-Do-zé\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

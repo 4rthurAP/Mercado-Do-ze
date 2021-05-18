@@ -64,7 +64,7 @@ namespace Mercado_Do_zé.Migrations
                     b.HasOne("Mercado_Do_zé.Models.Fornecedor", "Fornecedor")
                         .WithMany("Produtos")
                         .HasForeignKey("FornecedorID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Fornecedor");
