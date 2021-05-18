@@ -90,11 +90,11 @@ namespace Mercado_Do_zé.Controllers
         [HttpPost]
         public async Task<ActionResult<Fornecedor>> PostFornecedor(Fornecedor fornecedor)
         {
+
             if(fornecedor.NomeFornecedor.Length < 10 || fornecedor.NomeFornecedor.Length > 50)
             {
                 return BadRequest("O campo fornecedor deve ter de 10 a 50 caracteres");
             }
-
             _context.Fornecedores.Add(fornecedor);
             await _context.SaveChangesAsync();
 
@@ -103,7 +103,7 @@ namespace Mercado_Do_zé.Controllers
 
         // DELETE: api/Fornecedores/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteFornecedor(int id)
+        public async Task<ActionResult<IEnumerable<Fornecedor>>> DeleteFornecedor(int id)
         {
 
             var fornecedor = await _context.Fornecedores.FindAsync(id);
@@ -111,14 +111,18 @@ namespace Mercado_Do_zé.Controllers
             {
                 return NotFound();
             }
-
             var listarProdutos = await _context.Fornecedores
                                 .Select(x => new Fornecedor
                                 {
                                    Produtos = x.Produtos
-                                })
-                .ToListAsync();
-            
+                                }).ToListAsync();
+
+            var produtosvinculados = fornecedor.Produtos;
+
+            if(produtosvinculados != null)
+            {
+                return BadRequest("Há produtos vinculados a esse fornecedor");
+            }
 
             _context.Fornecedores.Remove(fornecedor);
             await _context.SaveChangesAsync();

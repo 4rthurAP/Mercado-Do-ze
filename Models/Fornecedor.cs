@@ -12,6 +12,7 @@ namespace Mercado_Do_zé.Models
         [Key()]
         public int Id { get; set; }
         public string NomeFornecedor { get; set; }
+
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public virtual List<Produto> Produtos { get; set; }
     }

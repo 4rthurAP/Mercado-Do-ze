@@ -28,7 +28,7 @@ namespace Mercado_Do_zé.Controllers
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetProdutos()
         {
 
-            return await _context.Produtos.Include("Fornecedor")
+            return await _context.Produtos
                 .Select(x => new ProdutoDTO {
                     FornecedorID = x.FornecedorID,
                     Descricao = x.Descricao,

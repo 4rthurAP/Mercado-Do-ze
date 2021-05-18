@@ -17,6 +17,7 @@ namespace Mercado_Do_zé.DTO
         public int Quantidade { get; set; }
 
         public int FornecedorID { get; set; }
+
         [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
         public string Fornecedor { get; set; }
 
